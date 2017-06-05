@@ -2,13 +2,14 @@ import win32com.client as win32
 
 outlook = win32.Dispatch("Outlook.Application").GetNamespace("MAPI")
 
-#outbox ha ID 5
+#Outbox has ID 5 - check the ID
 outbox = outlook.GetDefaultFolder(5) 
 
-messages = outbox.Items.restrict("[SentOn] > '5/30/2017 08:00 AM'")
+#Pay attention to your sys datetime
+messages = outbox.Items.restrict("[SentOn] > '05/06/2017 10:00 AM'")
 
 for message in messages:
-	# print message
+	# print message - use this to verify if the restrict works before launching the script
 	NewMsg = message.Forward()
 	NewMsg.Body = message.Body
 	NewMsg.Subject = message.Subject
