@@ -5,5 +5,5 @@
               
 **Mailing.py** - Fetch through your Outlook's outbox and forward the emails starting from a set date.
 
-**ListDocInFolders** - List of documents in a chosen folder with the related subfolders
+**ListDocInFolders.py** - List of documents in a chosen folder with the related subfolders
 
