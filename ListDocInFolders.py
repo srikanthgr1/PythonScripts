@@ -1,7 +1,11 @@
 import os
-
-root = 'c:\users\marco\desktop\jazz books'
+root = 'C:\\Users\\marco\\Desktop\\Folder'
+values=''
 
 for path, subdirs, files in os.walk(root):
     for name in files:
-        print os.path.join(path, name)
+        values = values + os.path.join(path, name) + '\n'
+
+samplef = open('sample.txt', 'w')
+samplef.write(values)
+samplef.close() 
